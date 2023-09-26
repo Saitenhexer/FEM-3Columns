@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --vdark-cyan: hsl(179, 100%, 13%);
+  --trans-white: hsl(0, 0%, 100%, 0.75);
+  --vlight-gray: hsl(0, 0%, 95%);
+  --fnt-lexend: "Lexend Deca";
+  --fnt-bigshoulders: "Big Shoulders Display";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--vlight-gray);
+}
+
+.column-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 600px;
+}
+
+.column-layout {
+  display: flex;
+}
+
+.sedans {
+  background-color: var(--bright-orange);
+  border-radius: 10px 0 0 10px;
+  padding: 40px;
+}
+
+.suv {
+  background-color: var(--dark-cyan);
+  padding: 40px;
+}
+
+.luxury {
+  background-color: var(--vdark-cyan);
+  border-radius: 0 10px 10px 0;
+  padding: 40px;
+}
+
+.car-heading {
+  font-family: var(--fnt-bigshoulders);
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 30px 0;
+  color: var(--vlight-gray);
+}
+
+.car-text {
+  font-family: var(--fnt-lexend);
+  font-size: 11px;
+  color: var(--trans-white);
+  margin-bottom: 80px;
+}
+
+.btn-sedans {
+  border-radius: 25px;
+  border: 2px solid var(--vlight-gray);
+  height: 50px;
+  color: var(--bright-orange);
+  width: 130px;
+  font-family: var(--fnt-bigshoulders);
+  font-size: 18px;
+  background-color: var(--vlight-gray);
+}
+
+.btn-suv {
+  border-radius: 25px;
+  border: 2px solid var(--vlight-gray);
+  height: 50px;
+  width: 130px;
+  font-size: 18px;
+  color: var(--dark-cyan);
+  font-family: var(--fnt-bigshoulders);
+  background-color: var(--vlight-gray);
+}
+
+.btn-luxury {
+  border-radius: 25px;
+  border: 2px solid var(--vlight-gray);
+  height: 50px;
+  width: 130px;
+  font-size: 18px;
+  color: var(--vdark-cyan);
+  font-family: var(--fnt-bigshoulders);
+  background-color: var(--vlight-gray);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--vlight-gray);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 500px) {
+  .column-layout {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sedans {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .luxury {
+    border-radius: 0 0 10px 10px;
+  }
+}
