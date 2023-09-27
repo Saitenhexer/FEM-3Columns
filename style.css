@@ -11,118 +11,103 @@
   --fnt-bigshoulders: "Big Shoulders Display";
 }
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: var(--vlight-gray);
+  font-size: 15px;
 }
 
 .column-container {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0 600px;
 }
 
 .column-layout {
   display: flex;
+  width: 52rem;
 }
 
 .sedans {
+  padding: 2em;
   background-color: var(--bright-orange);
-  border-radius: 10px 0 0 10px;
-  padding: 40px;
+  border-radius: 5px 0 0 5px;
 }
 
 .suv {
+  padding: 2em;
   background-color: var(--dark-cyan);
-  padding: 40px;
 }
 
 .luxury {
+  padding: 2rem;
   background-color: var(--vdark-cyan);
-  border-radius: 0 10px 10px 0;
-  padding: 40px;
+  border-radius: 0 5px 5px 0;
 }
 
 .car-heading {
-  font-family: var(--fnt-bigshoulders);
-  font-weight: 700;
-  font-size: 2.5rem;
   text-transform: uppercase;
-  margin: 30px 0;
+  font-family: var(--fnt-bigshoulders);
   color: var(--vlight-gray);
+  font-size: 3rem;
+  margin: 0.5em 0;
 }
 
 .car-text {
   font-family: var(--fnt-lexend);
-  font-size: 11px;
   color: var(--trans-white);
-  margin-bottom: 80px;
+  margin-bottom: 5em;
+}
+
+[class*="btn"] {
+  padding: 1em 2em;
+  border-radius: 2rem;
+  font-family: var(--fnt-lexend);
+  border: 2px solid var(--vlight-gray);
+  background-color: var(--vlight-gray);
+  margin-bottom: 1em;
 }
 
 .btn-sedans {
-  border-radius: 25px;
-  border: 2px solid var(--vlight-gray);
-  height: 50px;
   color: var(--bright-orange);
-  width: 130px;
-  font-family: var(--fnt-bigshoulders);
-  font-size: 18px;
-  background-color: var(--vlight-gray);
 }
 
 .btn-suv {
-  border-radius: 25px;
-  border: 2px solid var(--vlight-gray);
-  height: 50px;
-  width: 130px;
-  font-size: 18px;
   color: var(--dark-cyan);
-  font-family: var(--fnt-bigshoulders);
-  background-color: var(--vlight-gray);
 }
 
 .btn-luxury {
-  border-radius: 25px;
-  border: 2px solid var(--vlight-gray);
-  height: 50px;
-  width: 130px;
-  font-size: 18px;
   color: var(--vdark-cyan);
-  font-family: var(--fnt-bigshoulders);
-  background-color: var(--vlight-gray);
 }
 
 button:hover {
-  cursor: pointer;
   background-color: transparent;
+  cursor: pointer;
   color: var(--vlight-gray);
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
+@media screen and (max-width: 600px) {
+  .column-container {
+    margin: 2rem;
+  }
 
-@media screen and (max-width: 500px) {
   .column-layout {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
   .sedans {
-    border-radius: 10px 10px 0 0;
+    border-radius: 5px 5px 0 0;
   }
 
   .luxury {
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 5px 5px;
   }
 }
