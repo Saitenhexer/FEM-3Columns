@@ -111,3 +111,11 @@ button:hover {
     border-radius: 0 0 5px 5px;
   }
 }
+
+@media (hover: none) {
+  button:active {
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--vlight-gray);
+  }
+}
